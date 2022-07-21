@@ -16,7 +16,7 @@ func (h *Host) AssignPermissions() {
 	// I close DoneEating chan in main
 	for number := range h.DoneEating {
 		// ... empty eating chan to give permission to eat for another philo
-		fmt.Printf("Host: Philosopher number %d done eating\n", number)
+		fmt.Printf("Host: Philosopher number %d done eating, there is new opportunity for eating right now!\n", number)
 		<-h.Eating
 	}
 }
